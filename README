@@ -1,15 +1,10 @@
-Alterar em api/config.json as informações certas de development
+Alterar em api/config/config.json as informações certas de development
 
-Regra 1)
-email regex utilizando: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i
+digitar "npm sequelize-cli db:create" 
 
-    [a-z0-9.]+ - parte antes do @ do e-mail, nome do usuário;
-    @ - caractere de arroba obrigatório;
-    [a-z0-9]+ - parte depois do @ do e-mail, nome do provedor;
-    \. - caractere de ponto depois do nome do provedor;
-    [a-z]+ - geralmente onde é colocado o .com;
-    \. - caractere de ponto depois do .com, só deveria ser obrigatório caso haja por exemplo um .br ou a abreviação de qualquer outro país no final do e-mail;
-    ([a-z]+)? - geralmente onde é colocado a abreviação do país.
+digitar "npm sequelize-cli db:migrate"
+
+Regra 1) Email regex utilizando: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
 
 Regra 2) Email unico utilizando unique: true.
 
