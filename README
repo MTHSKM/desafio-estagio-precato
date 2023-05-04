@@ -1,0 +1,16 @@
+Alterar em api/config.json as informações certas de development
+
+Regra 1)
+email regex utilizando: /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i
+
+    [a-z0-9.]+ - parte antes do @ do e-mail, nome do usuário;
+    @ - caractere de arroba obrigatório;
+    [a-z0-9]+ - parte depois do @ do e-mail, nome do provedor;
+    \. - caractere de ponto depois do nome do provedor;
+    [a-z]+ - geralmente onde é colocado o .com;
+    \. - caractere de ponto depois do .com, só deveria ser obrigatório caso haja por exemplo um .br ou a abreviação de qualquer outro país no final do e-mail;
+    ([a-z]+)? - geralmente onde é colocado a abreviação do país.
+
+Regra 2) Email unico utilizando unique: true.
+
+Regra 3) Sequelize já tem como atributo padrão o ID, CreatedAt e UpdatedAt, porém foi adicionado o create_at manualmente, logo temos duas datas de criação identicas, recebendo Date como tipo de valor.
