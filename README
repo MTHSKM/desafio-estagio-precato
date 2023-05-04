@@ -1,6 +1,6 @@
 Alterar em api/config/config.json as informações certas de development
 
-criar um arquivo chamado ".sequelizerc"
+criar um arquivo chamado ".sequelizerc" na pasta raiz
 adicionar o seguinte código:
 
 const path = require('path');
