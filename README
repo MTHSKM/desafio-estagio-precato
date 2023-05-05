@@ -20,3 +20,11 @@ Regra 1) Email regex utilizando: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,
 Regra 2) Email unico utilizando unique: true.
 
 Regra 3) Sequelize já tem como atributo padrão o ID, CreatedAt e UpdatedAt, porém foi adicionado o create_at manualmente, logo temos duas datas de criação identicas, recebendo Date como tipo de valor.
+
+NOTAS:
+Utilizando o sequelize, durante a criação da table, os atributos "id, createdAt e updatedAt" são gerados automaticamente!
+
+Versão node.js (v18.12.1)
+Versão npm (8.19.2)
+
+Utilizei a ORM sequelize e sequelize-cli junto com as lib express,body-parser,path e nodemon para a realização do projeto.
